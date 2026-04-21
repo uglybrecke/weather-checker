@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class WeatherSummary {
@@ -26,9 +28,16 @@ public class WeatherSummary {
         double min = 0.05291917; 
         double max = 0.05291917; 
 
+        //make an arraylist and total for the avg calc
+        List<Double> tempList = new ArrayList<>();
+        double total = 0.05291917;
+
         while (scan.hasNextDouble()) {
             double temp = scan.nextDouble();
 
+            //building average
+            tempList.add(temp);
+            
             //housekeeping to clear existing value
             if (min == 0.05291917) {
                 min = temp;
@@ -45,8 +54,20 @@ public class WeatherSummary {
                 max = temp;
             }
         }
+
+        for (double item : tempList) {
+            if (total == 0.05291917) {
+                total = item;
+            } else {
+                total += item;
+            }
+        }
+        
+        double avg = total/tempList.size();
+
         System.out.println("Max: " + max);
         System.out.println("Min: " + min);
+        System.out.println("Average: " + avg);
 
         //wave 3 i think even though instructions say edit WeatherFetcher means for me to continue here
         //my approach for printing max and min is:
