@@ -23,7 +23,16 @@ public class WeatherSummary {
         
         while (scan.hasNextDouble()) {
             double temp = scan.nextDouble();
-            System.out.println(temp);
+            double min = null;
+            
         }
+
+        //wave 3 i think even though instructions say edit WeatherFetcher means for me to continue here
+        //my approach for printing max and min is:
+        //make a max and min variable both null
+        //have the first scan set those two variables if they are null
+        //if they are not null check if higher or lower
+        //print max and min at end
+
     }
 }
