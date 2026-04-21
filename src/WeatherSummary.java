@@ -1,4 +1,14 @@
+import java.io.File;
+import java.util.Scanner;
+
+import javax.sound.sampled.SourceDataLine;
+
 public class WeatherSummary {
+    Scanner scan = new Scanner(System.in);
+    double temp = scan.nextDouble();
+    System.out.println(temp);
+    
+
     /**
      * Reads newline-delimted temperatures from System.in and prints summary
      * statistics to System.out.
