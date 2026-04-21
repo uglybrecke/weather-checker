@@ -1,7 +1,4 @@
-import java.io.File;
 import java.util.Scanner;
-
-import javax.sound.sampled.SourceDataLine;
 
 public class WeatherSummary {
 
