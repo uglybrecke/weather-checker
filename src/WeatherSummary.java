@@ -19,10 +19,11 @@ public class WeatherSummary {
      * @param args command line arguments (ignored)
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        double temp = scan.nextDouble();
-        System.out.println(temp);
-        // Implement this method!
-        // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
+        Scanner scan = new Scanner(System.in); //seems like command line action is pretending that we are typing in the info from temp instead of reading in a file
+        
+        while (scan.hasNextDouble()) {
+            double temp = scan.nextDouble();
+            System.out.println(temp);
+        }
     }
 }
